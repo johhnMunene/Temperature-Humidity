@@ -9,8 +9,8 @@
 //Declare DHT object:
 DHT dht(DHTPIN, DHTTYPE);
 //Intialize the sensor.
-int myNumb;
-int buzzPin=8;
+//int myNumb;
+//int buzzPin=8;
 int dt=2000; //2 seconds
 
 
@@ -34,11 +34,11 @@ float tempF = dht.readTemperature(true);
 
 
 //Trigger Sensor
-  if (tempC>30){
-    digitalWrite(buzzPin, HIGH);
-    delay(dt);
-    digitalWrite(buzzPin, LOW);
-  }
+ // if (tempC>30){
+   // digitalWrite(buzzPin, HIGH);
+   // delay(dt);
+   // digitalWrite(buzzPin, LOW);
+ // }
 
 //check if any reads failed
 if (isnan(humi) || isnan(tempC) || isnan(tempF)){
